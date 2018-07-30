@@ -1,0 +1,17 @@
+.parabox-container {
+  perspective: 800px;
+}
+
+.parabox {
+  backface-visibility: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  
+  transition-property: transform, box-shadow;
+  transition-duration: 0.2s, 0s;
+  
+  -webkit-font-smoothing: antialiased;
+}
+
+.parabox-shift {
+  transition-duration: 0.2s;
+}

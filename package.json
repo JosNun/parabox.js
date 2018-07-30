@@ -1,0 +1,35 @@
+{
+  "name": "parabox",
+  "version": "1.0.0",
+  "description": "A paralax library for the web",
+  "keywords": [
+    "paralax",
+    "CSS",
+    "transform"
+  ],
+  "main": "dist/parabox.js",
+  "module": "dist/parabox.es.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:es": "rollup -c -f es",
+    "build:cjs": "rollup -c -f umd"
+  },
+  "author": {
+    "name": "Josiah Nunemaker",
+    "email": "josiah.nunemaker@gmail.com",
+    "url": "https://josnun.github.io"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "rollup": "^0.63.4"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {}
+}

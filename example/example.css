@@ -1,0 +1,83 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  
+  background: linear-gradient(to bottom, skyblue, deepskyblue);
+  font-family: 'Raleway', sans-serif;  
+}
+
+
+/*****
+
+Header
+
+*****/
+.colorful-header {
+  position: relative;
+  height: 250px;
+  padding: 15px;
+  margin-bottom: 15px;
+  
+  box-sizing: border-box;
+  
+  color: #fff;
+}
+
+.colorful-header > h1 {
+  position: absolute;
+  top: 50%;
+  transform: translate(10%, -100%);
+  font-size: 3em;
+}
+
+
+
+.container {
+  width: 80%;
+  height: 80%;
+  
+  margin: auto;
+
+  color: #fff;
+}
+
+.main-card {
+  display: flex;
+  min-height: 250px;
+
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+
+  background: linear-gradient(to bottom right, #4b5dff, #5dff78);
+  border: 3px solid rgba(255, 255, 255, 0.9);
+}
+
+.main-card>h1 {
+  padding: 10px;
+  width: 80%;
+  
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.25);
+  text-align: center;
+  --parabox-height: 10;
+}
+
+.main-card>p {
+  align-self: flex-start;
+  
+  font-weight: 500;
+  --parabox-height: 2.5;
+}
+
+.get-started-button {
+  margin: 15px;
+  padding: 10px;
+  
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  --parabox-height: 2.5;
+}
