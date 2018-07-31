@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Parabox Demo</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/parabox.js/dist/parabox.css">
+  <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/parabox.js/dist/parabox.es.js"></script> -->
+
+
+  <style>
+    body,
+    html {
+      margin: 0;
+
+      background: linear-gradient(to bottom, skyblue, deepskyblue);
+      font-family: 'Raleway', sans-serif;
+    }
+
+    body {
+      display: flex;
+    }
+
+    .container {
+      width: 80%;
+      height: 80%;
+
+      margin: auto;
+
+      color: #fff;
+    }
+
+    .main-card {
+      display: flex;
+      min-height: 250px;
+
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+
+      background: linear-gradient(to bottom right, #4b5dff, #5dff78);
+      border: 3px solid rgba(255, 255, 255, 0.9);
+    }
+
+    .main-card>h1 {
+      padding: 10px;
+      width: 80%;
+
+      border: 3px solid rgba(255, 255, 255, 0.9);
+      background-color: rgba(255, 255, 255, 0.25);
+      text-align: center;
+      --parabox-height: 10;
+    }
+
+    .main-card>p {
+      align-self: flex-start;
+
+      font-weight: 500;
+      --parabox-height: 2.5;
+    }
+
+    .get-started-button {
+      margin: 15px;
+      padding: 10px;
+
+      border: 3px solid rgba(255, 255, 255, 0.9);
+      background-color: rgba(255, 255, 255, 0.25);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      --parabox-height: 2.5;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="parabox-container container">
+    <div class="main-card parabox">
+      <h1 class="parabox-shift">Hey there!</h1>
+      <p class="parabox-shift">This is a parabox. You can make some content appear as if it's above it's container, like me.</p>
+      <p>Or you can let content seem to sit flat against it's parent, like usual.</p>
+      <a class="get-started-button parabox parabox-shift" href="#">Get Started</a>
+    </div>
+  </div>
+
+  <script type="module">
+    import * as parabox from 'https://cdn.jsdelivr.net/npm/parabox.js/dist/parabox.es.js';
+    parabox.init();
+  </script>
+</body>
+
+</html>
