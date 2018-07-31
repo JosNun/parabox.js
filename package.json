@@ -1,5 +1,5 @@
 {
-  "name": "parabox",
+  "name": "parabox.js",
   "version": "1.0.0",
   "description": "A paralax library for the web",
   "keywords": [
@@ -13,9 +13,8 @@
     "example": "example"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:es": "rollup -c -f es",
-    "build:cjs": "rollup -c -f umd"
+    "dev": "gulp dev:demo",
+    "build": "gulp build"
   },
   "author": {
     "name": "Josiah Nunemaker",
@@ -30,6 +29,5 @@
   },
   "files": [
     "dist"
-  ],
-  "dependencies": {}
+  ]
 }
