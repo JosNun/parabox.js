@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const rollup = require('rollup');
+const babel = require('rollup-plugin-babel');
 const browserSync = require('browser-sync').create();
 
 gulp.task('dev', async () => {
@@ -20,35 +21,35 @@ gulp.task('dev:demo', async () => {
   gulp.watch('src/*', ['build']).on('change', browserSync.reload);
 });
 
-gulp.task('build', async () => {
+gulp.task('build:umd', async () => {
   const bundle = await rollup.rollup({
     input: './src/index.js',
+    plugins: [
+      babel({
+        exclude: 'node_modules/**',
+      }),
+    ],
   });
 
-  // write for the demos
-  bundle.write({
-    file: 'example/parabox/parabox.js',
-    format: 'umd',
-    name: 'parabox',
-  });
-
-  bundle.write({
-    file: 'example/parabox/parabox.es.js',
-    format: 'es',
-  });
-
-  // Write for dist
   bundle.write({
     file: 'dist/parabox.js',
     format: 'umd',
     name: 'parabox',
+  });
+});
+
+gulp.task('build:es', async () => {
+  const bundle = await rollup.rollup({
+    input: './src/index.js',
   });
 
   bundle.write({
     file: 'dist/parabox.es.js',
     format: 'es',
   });
+});
 
+gulp.task('build', ['build:umd', 'build:es'], async () => {
   gulp
     .src('src/parabox.css')
     .pipe(gulp.dest('dist'))
