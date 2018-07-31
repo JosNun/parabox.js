@@ -19,14 +19,11 @@ function tiltBox(e, el) {
   const transformX = horToBoxCenter * getTransformMultiplier(el);
   const transformY = verToBoxCenter * getTransformMultiplier(el);
 
-  el.style.boxShadow = `${transformX * -1 / rect.width * 4}px ${transformY *
-    -1 /
-    rect.height *
-    4}px 4px rgba(0, 0, 0, 0.25)`;
+  el.style.boxShadow = `${((transformX * -1) / rect.width) *
+    4}px ${((transformY * -1) / rect.height) * 4}px 4px rgba(0, 0, 0, 0.25)`;
 
-  el.style.transform = `rotateX(${transformY /
-    rect.height *
-    -4}deg) rotateY(${transformX * 1 / rect.width * 4}deg)`;
+  el.style.transform = `rotateX(${(transformY / rect.height) *
+    -4}deg) rotateY(${((transformX * 1) / rect.width) * 4}deg)`;
 
   shiftChildren(el, transformX, transformY);
 }
