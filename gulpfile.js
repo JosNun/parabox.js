@@ -35,6 +35,7 @@ gulp.task('build:umd', async () => {
     file: 'dist/parabox.js',
     format: 'umd',
     name: 'parabox',
+    sourcemap: true,
   });
 });
 
@@ -46,12 +47,10 @@ gulp.task('build:es', async () => {
   bundle.write({
     file: 'dist/parabox.es.js',
     format: 'es',
+    sourcemap: true,
   });
 });
 
 gulp.task('build', ['build:umd', 'build:es'], async () => {
-  gulp
-    .src('src/parabox.css')
-    .pipe(gulp.dest('dist'))
-    .pipe(gulp.dest('example/parabox'));
+  gulp.src('src/parabox.css').pipe(gulp.dest('dist'));
 });
