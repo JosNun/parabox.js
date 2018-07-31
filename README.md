@@ -21,7 +21,7 @@ Run the dev server
 npm run dev
 ```
 
-## usage
+## Usage
 ### Including files
 ```
   <link rel="stylesheet" type="text/css" href="./parabox/parabox.css">
@@ -40,9 +40,9 @@ npm run dev
   </div>
 ```
 
-Each parabox needs to be inside a container with a perspective. The `parabox-container` class does this, and is provided for convenience.
+Each parabox needs to be inside a container with a [perspective](https://developer.mozilla.org/en-US/docs/Web/CSS/perspective). The `parabox-container` class does this, and is provided for convenience.
 
-Children of a parabox with the class `parabox-shift` will shift based on the tilt of the parent parabox.
+Parabox children with the class `parabox-shift` will move based on the tilt of the parent parabox.
 
 ### Initialization
 

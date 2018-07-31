@@ -1,7 +1,7 @@
 {
   "name": "parabox.js",
   "version": "1.0.0",
-  "description": "A paralax library for the web",
+  "description": "A parallax library to fluff your flat elements",
   "keywords": [
     "paralax",
     "CSS",
