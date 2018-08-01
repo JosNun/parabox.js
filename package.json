@@ -13,7 +13,7 @@
     "example": "example"
   },
   "scripts": {
-    "dev": "gulp dev:demo",
+    "dev": "gulp dev",
     "build": "gulp build"
   },
   "author": {
@@ -30,7 +30,6 @@
     "babel-core": "^6.26.3",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.24.6",
     "gulp": "^3.9.1",
     "gulp-sourcemaps": "^2.6.4",
     "rollup": "^0.63.4",

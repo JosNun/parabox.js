@@ -1,1 +1,5 @@
+# Distribution
 dist/
+
+# Config
+.eslintrc.js
