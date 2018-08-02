@@ -65,19 +65,19 @@ If you add Parabox elements after initializing Parabox, you will need to rerun t
 
 ### Options
 #### Magnitude
-The amount that a parabox element shifts can be adjusted by adding a multiplier value, either inline via data attributes, or with custom CSS properties. Supplying a negative number inverts the effect. Default value is 1.
+The amount that a parabox element shifts can be adjusted by adding a magnitude value, either inline via data attributes, or with custom CSS properties. Supplying a negative number inverts the effect. Default value is 1.
 
 ```html
   <style>
-    .multiplied {
-      --parabox-multiplier: 5;
+    .magnified {
+      --parabox-magnitude: 5;
     }
   </style>
 
   <div class="parabox">I'm a normal parabox</div>
-  <div class="parabox" data-parabox-multiplier="5">The effect of your hover is multiplied for me!</div>
+  <div class="parabox" data-parabox-magnitude="5">The effect of your hover is magnified for me!</div>
   
-  <div class="parabox multiplied">The effect of your hover is also multiplied for me!</div>
+  <div class="parabox magnified">The effect of your hover is also magnified for me!</div>
 ```
 
 #### Height

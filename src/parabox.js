@@ -2,12 +2,12 @@ import { init as initParaboxShift, shiftChildren } from './parabox-shift.js';
 
 let paraboxes = [];
 
-function getTransformMultiplier(el) {
-  const multiplier =
-    el.dataset.paraboxMultiplier ||
-    getComputedStyle(el).getPropertyValue('--parabox-multiplier') ||
+function getTransformMagnitude(el) {
+  const magnitude =
+    el.dataset.paraboxMagnitude ||
+    getComputedStyle(el).getPropertyValue('--parabox-magnitude') ||
     1;
-  return multiplier;
+  return magnitude;
 }
 
 function tiltBox(e, el) {
@@ -16,8 +16,8 @@ function tiltBox(e, el) {
   const horToBoxCenter = e.clientX - rect.left - rect.width / 2;
   const verToBoxCenter = e.clientY - rect.top - rect.height / 2;
 
-  const transformX = horToBoxCenter * getTransformMultiplier(el);
-  const transformY = verToBoxCenter * getTransformMultiplier(el);
+  const transformX = horToBoxCenter * getTransformMagnitude(el);
+  const transformY = verToBoxCenter * getTransformMagnitude(el);
 
   el.style.boxShadow = `${((transformX * -1) / rect.width) *
     4}px ${((transformY * -1) / rect.height) * 4}px 4px rgba(0, 0, 0, 0.25)`;
