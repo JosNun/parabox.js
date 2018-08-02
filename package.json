@@ -14,7 +14,8 @@
   },
   "scripts": {
     "dev": "gulp dev",
-    "build": "gulp build"
+    "build": "gulp build",
+    "prepublish": "gulp build"
   },
   "author": {
     "name": "Josiah Nunemaker",
