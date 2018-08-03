@@ -58,13 +58,13 @@ Then get the files from the `dist/` and put them in your project and link 'em up
 
 ### HTML Structure
 
-```
+```html
 <div class="parabox-container">
-    <div class="parabox">
-      <h1 class="parabox-shift">Hey there! I seem to stand out.</h1>
-      <p>This content appears flat against the card</p>
-    </div>
+  <div class="parabox">
+    <h1 class="parabox-shift">Hey there! I seem to stand out.</h1>
+    <p>This content appears flat against the card</p>
   </div>
+</div>
 ```
 
 Each parabox needs to be inside a container with a [perspective](https://developer.mozilla.org/en-US/docs/Web/CSS/perspective). The `parabox-container` class does this, and is provided for convenience, but is not necessary if another parent has a perspective.
@@ -134,5 +134,5 @@ npm run dev
 Pull requests welcome :)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for more details/
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/JosNun/parabox.js/blob/master/License) file for more details.
 
