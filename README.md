@@ -2,6 +2,8 @@
 
 Rotates your elements in 3D space based on your mouse position.
 
+### [Demo on Codepen](https://codepen.io/FracturedLoop/full/VBXpbj/)
+
 ## Installing
 
 Clone the repo
@@ -30,7 +32,7 @@ npm run dev
   
   // Optionally, if your environment supports ES modules, you can include Parabox.js as a module
   <script type="module">
-    import * as parabox from 'https://cdn.jsdelivr.net/npm/parabox.js/dist/parabox.es.js';
+    import parabox from 'https://cdn.jsdelivr.net/npm/parabox.js/dist/parabox.es.js';
   </script>
 
   // Using the built files

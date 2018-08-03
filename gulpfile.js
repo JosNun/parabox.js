@@ -8,7 +8,7 @@ gulp.task('dev', () => {
 
 gulp.task('build:umd', async () => {
   const bundle = await rollup.rollup({
-    input: './src/index.js',
+    input: './src/parabox.js',
     plugins: [
       babel({
         exclude: 'node_modules/**',
@@ -26,7 +26,7 @@ gulp.task('build:umd', async () => {
 
 gulp.task('build:es', async () => {
   const bundle = await rollup.rollup({
-    input: './src/index.js',
+    input: './src/parabox.js',
   });
 
   bundle.write({
