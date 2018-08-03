@@ -4,41 +4,56 @@ Rotates your elements in 3D space based on your mouse position.
 
 ### [Demo on Codepen](https://codepen.io/FracturedLoop/full/VBXpbj/)
 
-## Installing
-
-Clone the repo
-```
-git clone https://github.com/JosNun/parabox.js.git
-```
-
-Install the dependencies 
-```
-npm install
-```
-
-Run the dev server to rebuild when the files in `src/` change.
-```
-npm run dev
-```
-
 ## Usage
-### Including files
+### Install using NPM
+
 ```
-  // Using a CDN
-  // NOTE: for selecting specific versions (which you should ALWAYS do in production), see the docs on https://www.jsdelivr.com/ 
+npm install parabox.js
+```
+
+Then, just include it like any other module.
+
+```
+import parabox from 'parabox.js';
+```
+
+### In-browser
+```html
+  <!-- NOTE: for selecting specific versions (which you should ALWAYS do in production), see the docs on https://www.jsdelivr.com/ -->
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/parabox.js/dist/parabox.css">
   <script src="https://cdn.jsdelivr.net/npm/parabox.js/dist/parabox.js"></script>
-  
-  // Optionally, if your environment supports ES modules, you can include Parabox.js as a module
-  <script type="module">
-    import parabox from 'https://cdn.jsdelivr.net/npm/parabox.js/dist/parabox.es.js';
-  </script>
+```
 
-  // Using the built files
+### Or, use the files
+
+First, download and build the files.
+```bash
+  git clone https://github.com/JosNun/parabox.js.git
+  npm install
+  npm run build
+```
+
+Then get the files from the `dist/` and put them in your project and link 'em up.
+
+```html
   <link rel="stylesheet" type="text/css" href="./parabox/parabox.css">
   
   <script src="./parabox/parabox.js"></script>
+```
+
+```html
+  // Optionally, if your environment supports ES modules, you can include Parabox.js as a module
+  
+  // Via CDN
+  <script type="module">
+    import parabox from 'https://cdn.jsdelivr.net/npm/parabox.js/dist/parabox.es.js';
+  </script>
+  
+  // Or via file
+  <script type="module">
+    import parabox from './parabox.es.js';
+  </script>
 ```
 
 ### HTML Structure
@@ -99,7 +114,23 @@ Shifted elements can have their "height" adjusted, so they appear closer or furt
   </div>
 ```
 
-### Contributing
+## Developing
+
+Clone the repo
+```
+git clone https://github.com/JosNun/parabox.js.git
+```
+
+Install the dependencies 
+```
+npm install
+```
+
+Run the dev server to rebuild when the files in `src/` change.
+```
+npm run dev
+```
+
 Pull requests welcome :)
 
 ## License
