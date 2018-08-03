@@ -1,6 +1,6 @@
 {
   "name": "parabox.js",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A parallax library to fluff your flat elements",
   "keywords": [
     "paralax",
@@ -15,7 +15,7 @@
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp build",
-    "prepublish": "gulp build"
+    "prepare": "gulp build"
   },
   "author": {
     "name": "Josiah Nunemaker",
